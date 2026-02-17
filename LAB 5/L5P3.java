@@ -1,5 +1,11 @@
 import java.lang.reflect.Method;
 import java.lang.annotation.*;
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.METHOD)
+@interface Bullet{
+	String str();
+	double dbl();
+}
 class L5P3{
 	@Bullet(str="Camlin",dbl=12.36658)
 	public static void anyMethod() throws NoSuchMethodException{
@@ -12,4 +18,5 @@ class L5P3{
 		anyMethod();
 	}
 }
+
 		
